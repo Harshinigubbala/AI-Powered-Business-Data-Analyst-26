@@ -1,4 +1,3 @@
-
 # AI-Powered Business Data Analyst
 
 A Streamlit dashboard and rule-based natural-language question interpreter for the UCI Online Retail transaction dataset.
@@ -7,13 +6,13 @@ A Streamlit dashboard and rule-based natural-language question interpreter for t
 
 - **Source:** [UCI Machine Learning Repository – Online Retail](https://archive.ics.uci.edu/dataset/352/online-retail)
 - The dataset contains transactions from a UK-based online retailer between 1 December 2010 and 9 December 2011.
-- The original dataset contains 541,909 transaction rows.
+- Original dataset size: 541,909 transaction rows.
 - It includes invoice number, product details, quantity, invoice date, unit price, customer ID, and country.
 - Country is used as the geographic dimension.
 - Sales are calculated as `Quantity × UnitPrice` in GBP.
 - The dataset does not contain cost or profit information.
 
-Download `Online Retail.xlsx` from the UCI website and place it inside:
+The dataset is available at:
 
 `data/raw/Online Retail.xlsx`
 
@@ -68,6 +67,11 @@ AI_Business_Data_Analyst_Updated/
 │   └── raw/
 │       └── Online Retail.xlsx
 │
+├── docs/
+│   ├── architecture.md
+│   ├── data_flow.md
+│   └── LLD.md
+│
 ├── analysis.py
 ├── dashboard.py
 ├── first_analysis.py
@@ -75,28 +79,38 @@ AI_Business_Data_Analyst_Updated/
 ├── requirements.txt
 ├── readme.md
 ├── validation_report.md
-├── architecture.md
-├── data_flow.md
-└── LLD.md
+└── .gitignore
 ```
 
 ## 6. Installation and Setup
 
-Install the required dependencies:
+### Step 1: Install Python
+
+Install Python on your system.
+
+### Step 2: Install dependencies
+
+Run this command from the project root directory:
 
 ```bash
 python -m pip install -r requirements.txt
 ```
 
-Run the dashboard:
+### Step 3: Check the dataset
+
+Make sure the Excel dataset is available at:
+
+`data/raw/Online Retail.xlsx`
+
+### Step 4: Run the dashboard
+
+Execute:
 
 ```bash
 python -m streamlit run dashboard.py
 ```
 
-Run the commands from the project root directory.
-
-Make sure the Excel dataset is available at `data/raw/Online Retail.xlsx`.
+The Streamlit application will open in your web browser.
 
 ## 7. Question Answering Workflow
 
@@ -167,9 +181,13 @@ The developer should understand and be able to explain the implementation.
 
 ## 12. Project Documentation
 
-The following documentation is included:
+All technical documentation is available in the `docs/` folder:
 
-1. `architecture.md` – Explains the overall system architecture.
-2. `data_flow.md` – Explains how data moves through the application.
-3. `LLD.md` – Describes the project modules, processing workflow, data fields, and technologies.
+1. `docs/architecture.md` – Explains the overall system architecture.
+2. `docs/data_flow.md` – Explains how data moves through the application.
+3. `docs/LLD.md` – Describes the project modules, processing workflow, data fields, and technologies.
 4. `validation_report.md` – Describes validation tests and their results.
+
+---
+
+**Project Repository:** [AI-Powered Business Data Analyst on GitHub](https://github.com/Harshinigubbala/AI-Powered-Business-Data-Analyst-26)
